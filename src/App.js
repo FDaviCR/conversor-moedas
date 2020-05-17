@@ -3,12 +3,13 @@ import './App.css';
 import {Jumbotron, Button, Form, Col, Spinner, Alert, Modal} from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faAngleDoubleRight} from '@fortawesome/free-solid-svg-icons';
+import ListarMoedas from './listar-moedas';
 
 function App() {
   return (
     <div style={{paddingTop:'10%'}}>
       <h1 className="text-center">Conversor de moedas!</h1>
-      <Alert variant="danger" show={true}>
+      <Alert variant="danger" show={false}>
         Erro, tente novamente!
       </Alert>
       <Jumbotron>
@@ -19,6 +20,7 @@ function App() {
             </Col>
             <Col sm="3">
               <Form.Control as="select">
+                <ListarMoedas/>
               </Form.Control>
             </Col>
             <Col sm="1" className="text-center" style={{paddingTop:'5px'}}>
@@ -26,6 +28,7 @@ function App() {
             </Col>
             <Col sm="3">
               <Form.Control as="select">
+                <ListarMoedas/>
               </Form.Control>
             </Col>
             <Col sm="2">
@@ -36,7 +39,7 @@ function App() {
             </Col>
           </Form.Row>
         </Form>
-        <Modal show={true}>
+        <Modal show={false}>
           <Modal.Header closeButton>
             <Modal.Title>Conversão</Modal.Title>
           </Modal.Header>
